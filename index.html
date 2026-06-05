@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lane Barton's Cpider — Order Online</title>
+<title>CPIDER — Order Online</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #F5E6C8;
+    --cream: #FCEAD5;
     --parchment: #EDD9A3;
-    --deep-brown: #3D1F0A;
+    --dark-brown: #4A2A12;
     --mid-brown: #6B3A1F;
     --amber: #C17A2A;
     --gold: #B8892A;
@@ -21,10 +21,8 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background-color: var(--deep-brown);
+    background-color: var(--cream);
     background-image: 
-      radial-gradient(ellipse at 20% 20%, rgba(193,122,42,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 80%, rgba(139,26,26,0.15) 0%, transparent 50%);
     font-family: 'Crimson Text', Georgia, serif;
     min-height: 100vh;
     overflow-x: hidden;
@@ -68,36 +66,6 @@
     text-align: center;
     padding: 48px 0 32px;
     animation: fadeDown 0.8s ease both;
-  }
-
-  .provenance-stamp {
-    display: inline-block;
-    border: 2px solid var(--amber);
-    border-radius: 50%;
-    width: 72px;
-    height: 72px;
-    line-height: 1.1;
-    font-family: 'Oswald', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--amber);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto 20px;
-    padding: 8px;
-    text-align: center;
-    position: relative;
-  }
-  .provenance-stamp::before {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    border: 1px solid var(--amber);
-    border-radius: 50%;
-    opacity: 0.5;
   }
 
   .brand-sub {
@@ -408,7 +376,7 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     background: var(--amber);
-    color: var(--deep-brown);
+    color: var(--dark-brown);
     padding: 2px 6px;
     border-radius: 2px;
     font-weight: 600;
@@ -566,14 +534,8 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="provenance-stamp">
-      <span>MADE IN</span>
-      <span style="font-size:11px; font-weight:600;">NORTH</span>
-      <span style="font-size:11px; font-weight:600;">DEVON</span>
-      <span>🕷</span>
-    </div>
-    <p class="brand-sub">Lane Barton's</p>
-    <h1 class="brand-name">C<span>P</span>IDER</h1>
+    <img src="images/provenance-stamp.png" alt="Provenance Stamp" style="width:220px; margin-bottom:20px;">
+    <img src="images/logo.png" alt="CPIDER Logo" style="width:220px; margin-bottom:20px;">
     <div class="header-divider">
       <span class="spider-icon">🕷</span>
     </div>
