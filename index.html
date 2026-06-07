@@ -152,12 +152,40 @@
     height: 3px;
   }
 
+  .card-icon {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  .product-header {
+    padding: 24px 24px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .product-bottle {
+    width: 72px;
+    flex-shrink: 0;
+    object-fit: contain;
+    align-self: stretch;
+    max-height: 140px;
+    border-radius: 3px;
+  }
+
   .product-card.golden {
     background: rgba(245,154,35,0.07);
     border-color: var(--gold-mid);
   }
   .product-card.golden::before {
-    background: linear-gradient(90deg, var(--gold-deep), var(--gold-mid), var(--gold-deep));
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-mid), var(--gold-dark));
   }
 
   .product-card.vintage {
@@ -165,11 +193,13 @@
     border-color: var(--green-mid);
   }
   .product-card.vintage::before {
-    background: linear-gradient(90deg, var(--green-deep), var(--green-mid), var(--green-deep));
+    background: linear-gradient(90deg, var(--green-dark), var(--green-mid), var(--green-dark));
   }
 
-  .product-header {
-    padding: 24px 24px 0;
+
+
+  .product-header-right {
+    flex: 1;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -513,17 +543,21 @@
   <!-- GOLDEN CIDER -->
   <div class="product-block">
     <div class="product-card golden">
+      <img class="card-icon" src="images/golden-icon.png" alt="">
       <div class="product-header">
-        <div class="product-identity">
-          <p class="product-type">Batch No. 2601</p>
-          <h3 class="product-name">GOLDEN CIDER</h3>
-          <div class="product-meta">
-            <span class="meta-badge">5.5% ABV</span>
-            <span class="meta-badge">MEDIUM</span>
-            <span class="meta-badge">500ML</span>
+        <img class="product-bottle" src="images/golden-bottle.png" alt="Lane Barton's Golden Cider bottle">
+        <div class="product-header-right">
+          <div class="product-identity">
+            <p class="product-type">Batch No. 2601</p>
+            <h3 class="product-name">GOLDEN CIDER</h3>
+            <div class="product-meta">
+              <span class="meta-badge">5.5% ABV</span>
+              <span class="meta-badge">MEDIUM</span>
+              <span class="meta-badge">500ML</span>
+            </div>
           </div>
+          <span class="product-badge">Tamed</span>
         </div>
-        <span class="product-badge">Flagship</span>
       </div>
       <p class="product-description">Our signature drop. Golden in colour, bold in character — hand-picked Devon apples slowly fermented for a crisp, medium-dry finish with a hint of natural sweetness.</p>
       <div class="bundles">
@@ -574,17 +608,21 @@
   <!-- VINTAGE CIDER -->
   <div class="product-block">
     <div class="product-card vintage">
+      <img class="card-icon" src="images/vintage-icon.png" alt="">
       <div class="product-header">
-        <div class="product-identity">
-          <p class="product-type">Batch No. 2601</p>
-          <h3 class="product-name">VINTAGE CIDER</h3>
-          <div class="product-meta">
-            <span class="meta-badge">6.5% ABV</span>
-            <span class="meta-badge">DRY</span>
-            <span class="meta-badge">500ML</span>
+        <img class="product-bottle" src="images/vintage-bottle.png" alt="Lane Barton's Vintage Cider bottle">
+        <div class="product-header-right">
+          <div class="product-identity">
+            <p class="product-type">Batch No. 2601</p>
+            <h3 class="product-name">VINTAGE CIDER</h3>
+            <div class="product-meta">
+              <span class="meta-badge">6.5% ABV</span>
+              <span class="meta-badge">DRY</span>
+              <span class="meta-badge">500ML</span>
+            </div>
           </div>
+          <span class="product-badge">Wild</span>
         </div>
-        <span class="product-badge">Reserve</span>
       </div>
       <p class="product-description">A deeper, more complex character. Our vintage pressing draws on the best of the season's harvest — aged longer, with earthy, full-bodied notes that reward a slower sip.</p>
       <div class="bundles">
