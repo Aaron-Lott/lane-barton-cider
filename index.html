@@ -548,7 +548,7 @@
           <span class="buy-price">£3.50</span>
           <span class="buy-qty-label">/ bottle</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_GOLDEN_SINGLE" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/0678c854-16af-4692-a98e-ec5b80d8298c" class="buy-btn" target="_blank">
           Buy 1 Bottle <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -557,7 +557,7 @@
           <span class="buy-price">£12.00</span>
           <span class="buy-qty-label">/ 4 bottles</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_GOLDEN_4" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/5e7fd832-a650-4078-965c-0339f54fc1c4" class="buy-btn" target="_blank">
           Buy 4 Bottles <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -566,7 +566,7 @@
           <span class="buy-price">£30.00</span>
           <span class="buy-qty-label">/ 12 bottles</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_GOLDEN_12" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/61154bd3-5d4a-4f2c-ac21-57d414ed1aa6" class="buy-btn" target="_blank">
           Buy 12 Bottles <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -593,7 +593,7 @@
           <span class="buy-price">£3.50</span>
           <span class="buy-qty-label">/ bottle</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_VINTAGE_SINGLE" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/aea5bf65-6cf1-4c9b-8df3-303ec9e3ca22" class="buy-btn" target="_blank">
           Buy 1 Bottle <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -602,7 +602,7 @@
           <span class="buy-price">£12.00</span>
           <span class="buy-qty-label">/ 4 bottles</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_VINTAGE_4" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/03557e9e-2cee-4029-8e38-48e76a5d5ccc" class="buy-btn" target="_blank">
           Buy 4 Bottles <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -611,7 +611,7 @@
           <span class="buy-price">£30.00</span>
           <span class="buy-qty-label">/ 12 bottles</span>
         </div>
-        <a href="YOUR_REVOLUT_LINK_VINTAGE_12" class="buy-btn" target="_blank">
+        <a href="https://checkout.revolut.com/pay/dd0bfde3-caac-4030-81f3-34258306e6c0" class="buy-btn" target="_blank">
           Buy 12 Bottles <span class="buy-btn-arrow">→</span>
         </a>
       </div>
@@ -668,32 +668,5 @@
     <p class="footer-qr-label">Scan to order</p>
   </div>
 </footer>
-
-<script>
-  const accommodations = {
-    'the-barn':          'The Barn',
-    'the-stable':        'The Stable',
-    'dream-cottage':     'Dream Cottage',
-    'the-leisure-barn':  'The Leisure Barn'
-  };
-
-  const params = new URLSearchParams(window.location.search);
-  const key = params.get('accommodation');
-  const name = accommodations[key];
-
-  if (name) {
-    document.getElementById('accommodation-name').textContent = name;
-    document.getElementById('accommodation-banner').style.display = 'block';
-
-    document.querySelectorAll('a.buy-btn').forEach(btn => {
-      const href = btn.getAttribute('href');
-      if (href && !href.startsWith('YOUR_')) {
-        const url = new URL(href);
-        url.searchParams.set('reference', name);
-        btn.setAttribute('href', url.toString());
-      }
-    });
-  }
-</script>
 </body>
 </html>
